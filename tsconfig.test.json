@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./build-test",
+    "noUnusedLocals": false
+  },
+  "include": ["./test"],
+  "references": [
+      { "path": "./src" }
+  ]
+}

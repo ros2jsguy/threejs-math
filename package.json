@@ -1,0 +1,67 @@
+{
+  "name": "@ros2jsguy/three-math-ts",
+  "version": "0.143.1",
+  "description": "Stand-alone TypeScript version of three.js math",
+  "keywords": [
+    "math",
+    "vector math",
+    "matrix math",
+    "matrix",
+    "vector",
+    "vector3",
+    "euler",
+    "quaternion",
+    "linear algebra"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "clean": "npx rimraf -rf es lib buld-test",
+    "build": "npm run clean && tsc -p tsconfig.es.json && tsc -p tsconfig.lib.json",
+    "build:docs": "typedoc -out ./docs --hideGenerator true --cleanOutputDir false ./src",
+    "prepare": "npm run clean && npm run build && npm run build:docs",
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "mocha build-test",
+    "testx": "set TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' && set && mocha -r 'ts-node/register test/**/*.ts' "
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check-type && lint-staged"
+    }
+  },
+  "author": {
+    "name": "ros2jsguy",
+    "email": "ros2jsguy@gmail.com",
+    "url": "https://github.com/ros2jsguy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ros2jsguy/three.math"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.24.0",
+    "eslint-config-ali": "^12.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "mocha": "^9.0.3",
+    "ts-node": "^10.1.0",
+    "typedoc": "^0.23.5",
+    "typescript": "^4.2.4"
+  }
+}
