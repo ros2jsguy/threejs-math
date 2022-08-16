@@ -1,0 +1,13 @@
+docs/
+test/
+build-test/
+.vscode
+.project
+.check-type/
+wip/
+unused/
+.editorconfig
+.eslint*
+.settings/
+src/
+utils/

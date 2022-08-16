@@ -1,25 +1,15 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "declaration": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": false,
-    "importHelpers": false,
-    "strictNullChecks": true,
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "emitDecoratorMetadata": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
-    "assumeChangesOnlyAffectDirectDependencies": true,
-    "forceConsistentCasingInFileNames": false
-  }
+      "module": "commonjs",
+      "lib": ["es6"],
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "strictFunctionTypes": true,
+      "strictNullChecks": true,
+      "noEmit": true,
+      "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+      "types/**/*.ts"
+  ]
 }

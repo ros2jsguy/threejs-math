@@ -1,7 +1,7 @@
 {
-  "name": "@ros2jsguy/three-math-ts",
-  "version": "0.143.1",
-  "description": "Stand-alone TypeScript version of three.js math",
+  "name": "threejs-math",
+  "version": "0.143.0",
+  "description": "Stand-alone version of three.js math with TypeScript support",
   "keywords": [
     "math",
     "vector math",
@@ -13,22 +13,23 @@
     "quaternion",
     "linear algebra"
   ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "typings": "es/index.d.ts",
+  "type": "module",
+  "main": "./build/threejs-math.cjs",
+  "module": "./build/threejs-math.module.js",
+  "typings": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/threejs-math.module.js",
+      "require": "./build/threejs-math.cjs"
+    }
+  },
   "sideEffects": false,
-  "files": [
-    "es",
-    "lib"
-  ],
   "scripts": {
-    "clean": "npx rimraf -rf es lib buld-test",
-    "build": "npm run clean && tsc -p tsconfig.es.json && tsc -p tsconfig.lib.json",
-    "build:docs": "typedoc -out ./docs --hideGenerator true --cleanOutputDir false ./src",
-    "prepare": "npm run clean && npm run build && npm run build:docs",
-    "pretest": "tsc -p tsconfig.test.json",
-    "test": "mocha build-test",
-    "testx": "set TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' && set && mocha -r 'ts-node/register test/**/*.ts' "
+    "clean": "npx rimraf -rf build",
+    "build": "npm run clean && rollup --no-treeshake -c utils/build/rollup.config.js",
+    "build:docs": "typedoc -out ./docs --hideGenerator true --cleanOutputDir false ./types/index.d.ts",
+    "test": "qunit -r failonlyreporter test/unit/three.source.unit.js",
+    "lint": "eslint src --ext js"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint"
@@ -45,23 +46,36 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ros2jsguy/three.math"
+    "url": "https://github.com/ros2jsguy/threejs-curves"
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/chai": "^4.2.21",
-    "@types/mocha": "^9.0.0",
+    "@babel/core": "^7.18.9",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.18.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.6",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "chai": "^4.3.4",
+    "chai": "^4.3.6",
     "eslint": "^7.24.0",
     "eslint-config-ali": "^12.0.1",
     "eslint-plugin-import": "^2.22.1",
+    "failonlyreporter": "^1.0.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "mocha": "^9.0.3",
-    "ts-node": "^10.1.0",
-    "typedoc": "^0.23.5",
-    "typescript": "^4.2.4"
+    "mocha": "^10.0.0",
+    "qunit": "^2.19.1",
+    "rollup": "^2.77.2",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-visualizer": "^5.7.1",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.7.4"
   }
 }
