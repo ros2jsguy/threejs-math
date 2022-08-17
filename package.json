@@ -1,6 +1,6 @@
 {
   "name": "threejs-math",
-  "version": "0.143.0",
+  "version": "0.143.1",
   "description": "Stand-alone version of three.js math with TypeScript support",
   "keywords": [
     "math",
@@ -46,7 +46,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ros2jsguy/threejs-curves"
+    "url": "https://github.com/ros2jsguy/threejs-math"
   },
   "license": "MIT",
   "devDependencies": {
