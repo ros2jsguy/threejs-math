@@ -1,6 +1,6 @@
 {
   "name": "threejs-math",
-  "version": "0.143.1",
+  "version": "0.143.2",
   "description": "Stand-alone version of three.js math with TypeScript support",
   "keywords": [
     "math",

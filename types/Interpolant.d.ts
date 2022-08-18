@@ -26,32 +26,32 @@ export declare type InterpolantSettings = unknown;
  *
  */
 export declare abstract class Interpolant {
-    parameterPositions: any[];
-    sampleValues: any[];
-    resultBuffer?: any[] | undefined;
-    _cachedIndex: number;
-    valueSize: number;
-    settings: InterpolantSettings | null;
-    DefaultSettings_: unknown;
-    /**
-     * Create a new instance.
-     *
-     * Note: This is not designed to be called directly.
-     *
-     * @param parameterPositions - array of positions
-     * @param sampleValues - array of samples
-     * @param sampleSize - number of samples
-     * @param resultBuffer - buffer to store the interpolation results.
-     */
-    constructor(parameterPositions: any[], sampleValues: any[], sampleSize: number, resultBuffer?: any[] | undefined);
-    /**
-     * Evaluate the interpolant at position t.
-     * @param t - time
-     * @returns An array
-     */
-    evaluate(t: number): Array<any>;
-    getSettings_(): InterpolantSettings;
-    copySampleValue_(index: number): Array<any>;
-    abstract interpolate_(i1: number, t0?: number, t?: number, t1?: number): unknown;
-    abstract intervalChanged_(i1: number, t0?: number, t1?: number): void;
+  parameterPositions: any[];
+  sampleValues: any[];
+  resultBuffer?: any[] | undefined;
+  _cachedIndex: number;
+  valueSize: number;
+  settings: InterpolantSettings | null;
+  DefaultSettings_: unknown;
+  /**
+   * Create a new instance.
+   *
+   * Note: This is not designed to be called directly.
+   *
+   * @param parameterPositions - array of positions
+   * @param sampleValues - array of samples
+   * @param sampleSize - number of samples
+   * @param resultBuffer - buffer to store the interpolation results.
+   */
+  constructor(parameterPositions: any[], sampleValues: any[], sampleSize: number, resultBuffer?: any[] | undefined);
+  /**
+   * Evaluate the interpolant at position t.
+   * @param t - time
+   * @returns An array
+   */
+  evaluate(t: number): Array<any>;
+  getSettings_(): InterpolantSettings;
+  copySampleValue_(index: number): Array<any>;
+  abstract interpolate_(i1: number, t0?: number, t?: number, t1?: number): unknown;
+  abstract intervalChanged_(i1: number, t0?: number, t1?: number): void;
 }

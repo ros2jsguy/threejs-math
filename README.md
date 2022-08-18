@@ -32,5 +32,5 @@ This package is a standalone version of [three.js (r143) math](https://threejs.o
 The classes in TSDoc format are available [here](https://ros2jsguy.github.io/threejs-math/index.html).
 
 # History
-This module started as a fork of [three-math-ts](https://github.com/chenhebing/three.math) which has been dormant for some time. After extending that project and PR's going addressed I've moved on and started a series of focused threejs based modules such as this threejs-math package.
+This module started as a fork of [three-math-ts](https://github.com/chenhebing/three.math) which has been dormant for some time. After extending that project and PR's going unaddressed I've moved on and started a series of focused threejs based modules such as this threejs-math package.
 
