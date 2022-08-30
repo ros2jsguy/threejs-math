@@ -48,7 +48,7 @@ export declare class Ray extends Base {
   /**
    * Compute a Vector3 that is a given distance along this Ray.
    * @param t - the distance along the Ray to retrieve a position for.
-   * @param target — the result will be copied into this Vector3.
+   * @param target — (Optional) If defined, the result will be copied into this Vector3.
    * @returns The computed vector.
    */
   at(t: number, target?: Vector3): Vector3;

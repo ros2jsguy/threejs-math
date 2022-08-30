@@ -36,7 +36,7 @@ class Ray {
 
 	}
 
-	at( t, target ) {
+	at( t, target = new Vector3()) {
 
 		return target.copy( this.direction ).multiplyScalar( t ).add( this.origin );
 
@@ -58,7 +58,7 @@ class Ray {
 
 	}
 
-	closestPointToPoint( point, target ) {
+	closestPointToPoint( point, target = new Vector3() ) {
 
 		target.subVectors( point, this.origin );
 
@@ -217,7 +217,7 @@ class Ray {
 
 	}
 
-	intersectSphere( sphere, target ) {
+	intersectSphere( sphere, target = new Vector3()) {
 
 		_vector.subVectors( sphere.center, this.origin );
 		const tca = _vector.dot( this.direction );
@@ -395,7 +395,7 @@ class Ray {
 
 	}
 
-	intersectTriangle( a, b, c, backfaceCulling, target ) {
+	intersectTriangle( a, b, c, backfaceCulling, target) {
 
 		// Compute the offset origin, edges, and normal.
 
