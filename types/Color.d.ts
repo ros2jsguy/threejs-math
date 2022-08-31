@@ -214,3 +214,5 @@ export declare class Color extends Base {
   toJSON(): number;
   [Symbol.iterator](): IterableIterator<number>;
 }
+
+export type ColorName = keyof typeof Color.NAMES;
