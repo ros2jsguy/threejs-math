@@ -170,13 +170,49 @@ export declare class Matrix3 extends Base implements Matrix {
    * @param ty - offset y
    * @param sx - repeat x
    * @param sy - repeat y
-   * @param rotation - rotation in radians
+   * @param rotation - rotation, in radians. Positive values rotate counterclockwise
    * @param cx - center x of rotation
    * @param cy - center y of rotation
    * @returns This instance.
    */
   setUvTransform(tx: number, ty: number, sx: number, sy: number,
     rotation: number, cx: number, cy: number): this;
+  /**
+   * Sets this matrix as a 2D rotational transformation by theta radians.
+	 * The resulting matrix will be:
+	 * <code>
+   * cos(&theta;) -sin(&theta;) 0
+   * sin(&theta;) cos(&theta;)  0
+   * 0      0       1
+   * </code>
+   * @param theta  — Rotation angle in radians. Positive values rotate counterclockwise
+   * @returns This instance.
+   */
+  makeRotation(theta: number): this;
+  /**
+   * Sets this matrix as a 2D scale transform
+   * <code>
+   * x, 0, 0,
+   * 0, y, 0,
+   * 0, 0, 1
+		</code>
+    @param x - the amount to scale in the X axis
+    @param y - the amount to scale in the Y axis
+    @returns This instance.
+   */
+  makeScale(x: number, y: number): this;
+  /**
+   * Sets this matrix as a 2D translation transform:
+   * <code>
+   * 1, 0, x,
+   * 0, 1, y,
+   * 0, 0, 1
+   * </code>
+   * @param - the amount to translate in the X axis.
+   * @param - the amount to translate in the Y axis.
+   * @returns This instance.
+   */
+  makeTranslation(x: number, y: number): this;
   /**
    * Scales this matrix with the given scalar values.
    * @param sx - x scale factor

@@ -1,6 +1,6 @@
 # Stand-alone TypeScript version of three.js math
 
-This package is a standalone version of [three.js (r143) math](https://threejs.org/docs/#api/en/math/Box2) classes with TypeScript support and integrated TSdoc documentation. 
+This package is a standalone version of [three.js (r147) math](https://threejs.org/docs/#api/en/math/Box2) classes with TypeScript support and integrated TSdoc documentation. 
 
 * Box2
 * Box3
