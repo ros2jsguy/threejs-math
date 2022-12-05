@@ -66,7 +66,8 @@ export declare class Matrix3 extends Base implements Matrix {
    * @param n33
    * @returns This instance.
    */
-  set(n11: number, n12: number, n13: number, n21: number, n22: number, n23: number, n31: number, n32: number, n33: number): this;
+  set(n11: number, n12: number, n13: number, n21: number, n22: number, n23: number,
+    n31: number, n32: number, n33: number): this;
   /**
    * Resets this matrix to the 3x3 identity matrix:
    * ```

@@ -26,7 +26,8 @@ export declare class Quaternion extends Base {
    * @param srcOffset1 - An offset into the array src1.
    * @param t - Normalized interpolation factor (between 0 and 1).
    */
-  static slerpFlat(dst: number[], dstOffset: number, src0: number[], srcOffset0: number, src1: number[], srcOffset1: number, t: number): void;
+  static slerpFlat(dst: number[], dstOffset: number, src0: number[], srcOffset0: number,
+    src1: number[], srcOffset1: number, t: number): void;
   /**
    * Multiply 2 quaterions.
    * This multiplication implementation assumes the quaternion data are managed in flat arrays.
@@ -38,7 +39,8 @@ export declare class Quaternion extends Base {
    * @param src1 - The source array of the target quaternion.
    * @param srcOffset1 - An offset into the array src1.
    */
-  static multiplyQuaternionsFlat(dst: number[], dstOffset: number, src0: number[], srcOffset0: number, src1: number[], srcOffset1: number): number[];
+  static multiplyQuaternionsFlat(dst: number[], dstOffset: number, src0: number[],
+    srcOffset0: number, src1: number[], srcOffset1: number): number[];
   _x: number;
   _y: number;
   _z: number;

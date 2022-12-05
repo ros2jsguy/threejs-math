@@ -93,7 +93,8 @@ export declare class Ray extends Base {
    *    it receives the point on the line segment that is closest to this Ray.
    * @returns Th distance squared.
    */
-  distanceSqToSegment(v0: Vector3, v1: Vector3, optionalPointOnRay: Vector3, optionalPointOnSegment: Vector3): number;
+  distanceSqToSegment(v0: Vector3, v1: Vector3, optionalPointOnRay: Vector3,
+    optionalPointOnSegment: Vector3): number;
   /**
    * Intersect this Ray with a Sphere.
    * @param sphere - The Sphere to intersect with.
@@ -150,7 +151,8 @@ export declare class Ray extends Base {
    * @param target - the result will be copied into this Vector3.
    * @returns The intersection point or null if there is no intersection.
    */
-  intersectTriangle(a: Vector3, b: Vector3, c: Vector3, backfaceCulling: boolean, target: Vector3): Vector3 | null;
+  intersectTriangle(a: Vector3, b: Vector3, c: Vector3, backfaceCulling: boolean,
+    target: Vector3): Vector3 | null;
   /**
    * Transform this Ray by the Matrix4.
    * @param matrix4 - The Matrix4 to apply to this Ray.
