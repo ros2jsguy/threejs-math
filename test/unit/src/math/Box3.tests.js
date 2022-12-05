@@ -264,6 +264,7 @@ export default QUnit.module( 'Maths', () => {
 			var a = new Box3( zero3.clone(), one3.clone() );
 			var midpoint = one3.clone().multiplyScalar( 0.5 );
 			assert.ok( a.getCenter( center ).equals( midpoint ), 'Passed!' );
+      assert.ok( a.getCenter().equals( midpoint ), 'Passed!' );
 
 		} );
 
@@ -276,6 +277,7 @@ export default QUnit.module( 'Maths', () => {
 
 			var a = new Box3( zero3.clone(), one3.clone() );
 			assert.ok( a.getSize( size ).equals( one3 ), 'Passed!' );
+      assert.ok( a.getSize().equals( one3 ), 'Passed!' );
 
 		} );
 

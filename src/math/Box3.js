@@ -151,13 +151,13 @@ class Box3 {
 
 	}
 
-	getCenter( target ) {
+	getCenter( target = new Vector3() ) {
 
 		return this.isEmpty() ? target.set( 0, 0, 0 ) : target.addVectors( this.min, this.max ).multiplyScalar( 0.5 );
 
 	}
 
-	getSize( target ) {
+	getSize( target = new Vector3() ) {
 
 		return this.isEmpty() ? target.set( 0, 0, 0 ) : target.subVectors( this.max, this.min );
 

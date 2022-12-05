@@ -1,4 +1,5 @@
 import { Vector2 } from './Vector2.js';
+import { Vector3 } from './Vector3.js';
 
 const _vector = /*@__PURE__*/ new Vector2();
 
@@ -78,13 +79,13 @@ class Box2 {
 
 	}
 
-	getCenter( target ) {
+	getCenter( target = new Vector2() ) {
 
 		return this.isEmpty() ? target.set( 0, 0 ) : target.addVectors( this.min, this.max ).multiplyScalar( 0.5 );
 
 	}
 
-	getSize( target ) {
+	getSize( target = new Vector2() ) {
 
 		return this.isEmpty() ? target.set( 0, 0 ) : target.subVectors( this.max, this.min );
 

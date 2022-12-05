@@ -148,7 +148,7 @@ export default QUnit.module( 'Maths', () => {
 			var a = new Box2( zero2, one2 );
 			var midpoint = one2.clone().multiplyScalar( 0.5 );
 			assert.ok( a.getCenter( center ).equals( midpoint ), 'Passed!' );
-
+			assert.ok( a.getCenter( ).equals( midpoint ), 'Passed!' );
 		} );
 
 		QUnit.test( 'getSize', ( assert ) => {
@@ -160,6 +160,7 @@ export default QUnit.module( 'Maths', () => {
 
 			var a = new Box2( zero2.clone(), one2.clone() );
 			assert.ok( a.getSize( size ).equals( one2 ), 'Passed!' );
+      assert.ok( a.getSize().equals( one2 ), 'Passed!' );
 
 		} );
 
