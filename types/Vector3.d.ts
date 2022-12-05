@@ -162,7 +162,7 @@ export declare class Vector3 extends Base implements Vector {
    * @param s - The subtracting vector
    * @returns This instance.
    */
-  subScalar(s: number): Vector3;
+  subScalar(s: number): this;
   /**
    * Sets this vector to a - b.
    * @param a
@@ -442,7 +442,7 @@ export declare class Vector3 extends Base implements Vector {
    * @param s
    * @returns This instance.
    */
-  setFromSpherical(s: Spherical): Vector3;
+  setFromSpherical(s: Spherical): this;
   /**
    * Sets this vector from the spherical coordinates radius, phi and theta.
    * @param radius
@@ -450,13 +450,13 @@ export declare class Vector3 extends Base implements Vector {
    * @param theta
    * @returns This instance.
    */
-  setFromSphericalCoords(radius: number, phi: number, theta: number): Vector3;
+  setFromSphericalCoords(radius: number, phi: number, theta: number): this;
   /**
    * Sets this vector from the cylindrical coordinates c.
    * @param c
    * @returns This instance.
    */
-  setFromCylindrical(c: Cylindrical): Vector3;
+  setFromCylindrical(c: Cylindrical): this;
   /**
    * Sets this vector from the cylindrical coordinates radius, theta and y.
    * @param radius
@@ -464,33 +464,33 @@ export declare class Vector3 extends Base implements Vector {
    * @param y
    * @returns This instance.
    */
-  setFromCylindricalCoords(radius: number, theta: number, y: number): Vector3;
+  setFromCylindricalCoords(radius: number, theta: number, y: number): this;
   /**
    * Sets this vector to the position elements of the transformation matrix m.
    * @param m
    * @returns This instance.
    */
-  setFromMatrixPosition(m: Matrix4): Vector3;
+  setFromMatrixPosition(m: Matrix4): this;
   /**
    * Sets this vector to the scale elements of the transformation matrix m.
    * @param m
    * @returns This instance.
    */
-  setFromMatrixScale(m: Matrix4): Vector3;
+  setFromMatrixScale(m: Matrix4): this;
   /**
    * Sets this vector's x, y and z components from index column of matrix.
    * @param m
    * @param index
    * @returns This instance.
    */
-  setFromMatrixColumn(m: Matrix4, index: number): Vector3;
+  setFromMatrixColumn(m: Matrix4, index: number): this;
   /**
    * Sets this vector's x, y and z components from index column of matrix.
    * @param m
    * @param index
    * @returns This instance.
    */
-  setFromMatrix3Column(m: Matrix3, index: number): Vector3;
+  setFromMatrix3Column(m: Matrix3, index: number): this;
   /**
    * Sets this vector's x, y and z components from an euler's state.
    * @param e - The euler from which to set this state.
@@ -510,7 +510,7 @@ export declare class Vector3 extends Base implements Vector {
    * @param [offset=0] - Offset into the array.
    * @returns This instance.
    */
-  fromArray(array: number[], offset?: number): Vector3;
+  fromArray(array: number[], offset?: number): this;
   /**
    * Returns an array [x, y, z], or copies x, y and z into the provided array.
    * @param array - Array to store this vector to. If this is not provided a new array will be created.
@@ -522,7 +522,7 @@ export declare class Vector3 extends Base implements Vector {
    * Sets each component of this vector to a pseudo-random value between 0 and 1, excluding 1.
    * @returns This instance.
    */
-  random(): Vector3;
+  random(): this;
   /**
    * Sets each component of this vector to a pseudo-random value between 0 and 1, excluding 1.
    * @returns This instance.
